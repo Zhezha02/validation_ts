@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1 - Form validation</title>
+    <!--  <style>-->
+    <!--    .desc {-->
+    <!--      margin-bottom: 2rem;-->
+    <!--    }-->
+    <!--    /*-->
+    <!--      Ваши стили будут здесь-->
+    <!--     */-->
+    <!--  </style>-->
+    <link rel="stylesheet" type="text/css" href="./dist/main.css">
+</head>
+<body>
+<p class="desc">
+<p>Сделать валидацию формы средствами HTML + JS без использования библиотек</p>
+<p>Основное успловие в том что ошибки должны появляться "на лету" без отпавки формы, у аватара должно быть превью</p>
+<p>Отправка формы должна быть при нажатии "enter"</p>
+<form id="form" class="form">
+    <h2 class="form-title">Form</h2>
+
+    <input class="input" placeholder="Enter email" id="email" name="email" type="email"
+           pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.com" required/>
+    <!-- email, разрешены домены зоны com -->
+    <input class="input" placeholder="Enter name" id="name" name="name" type="text"
+           pattern="(([a-zA-Z]+ )([a-zA-Z]+[ ]*)+)" required/>
+    <!-- name, должно состоять из 2х слов минимум -->
+    <input class="input" placeholder="Enter password" id="password" name="password" type="password" minlength="8"
+           required/>
+    <!-- password, минимум 8 символов -->
+    <!--    <div class="image-input-wrapper">-->
+    <label class="label input">
+        <!--        Upload image-->
+        <input placeholder="upload image" class="image-input" id="avatar" name="avatar" type="file"
+               accept="image/jpeg,image/png" width="1024" height="1024" size="1048576" required/>
+    </label>
+    <!--    </div>-->
+    <!-- avatar, jpg, png, максимальный вес 1мб, размер 1024х1024, пропорции 1х1 -->
+</form>
+<script defer src="./dist/main.min.js"></script>
+</body>
+</html>

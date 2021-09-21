@@ -1,0 +1,1 @@
+body *{box-sizing:border-box}.form{display:flex;flex-direction:column;max-width:600px}.form>*{margin-bottom:15px}.form-title{align-self:center}.input{width:100%;padding:10px;border:1px solid #708090}.label{width:100%;display:block}.img-wrapper{margin-top:10px;width:100%;height:100%;max-width:200px;max-height:200px;display:flex;justify-content:center;align-items:center}
